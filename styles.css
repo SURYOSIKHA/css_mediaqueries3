@@ -1,0 +1,122 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.maincont{
+    background-color: #bdbdbd;
+    /* height: 100vh; */
+    width: 90;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    overflow-x:hidden;
+}
+
+.maincont > h2{
+    position: relative;
+    margin-bottom: 1rem;
+}
+.maincont > h2::before{
+    content: "";
+    /* display: block; */
+    width: 49.5px;
+    height: 3px;
+    background: #fc2779;
+    top:10px;
+    right: 10rem;
+    position: absolute;
+}
+
+.maincont > h2::after{
+    content: "";
+    /* display: block; */
+    width: 49.5px;
+    height: 3px;
+    background: #fc2779;
+    top:10px;
+    left: 10rem;
+    position: absolute;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(4, 1fr); */
+    gap: 10px;
+    width: 90%;
+    max-width: 1200px;
+    overflow-x: hidden;
+}
+
+.grid-item {
+    background-color: white;
+    padding: 10px;
+    padding-bottom: 2rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.grid-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.grid-item .coupon {
+    margin-top: 10px;
+    /* font-weight: bold; */
+    font-size: 10px;
+    color: #333;
+    /* width: 10rem;
+    height: 3rem; */
+    border: 1.5px dashed #fc2779;;
+    align-self: self-end;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #edc8d6;
+    /* justify-content: center; */
+}
+
+.grid-item >.coupon > p{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #fc2779;
+    justify-content: center;
+    margin: 10px;
+}
+.grid-item > .coupon > div{
+    height: 100%;
+    width: 30%;
+    border-left: 1.5px dashed #fc2779;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 10px; */
+    /* margin-left: 1rem; */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.grid-container > .coupon > div > i{
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:800px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
